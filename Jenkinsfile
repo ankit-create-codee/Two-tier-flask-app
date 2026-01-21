@@ -40,8 +40,7 @@ pipeline {
           }
       }
     }
-}
-post{
+    post{
         success{
             script{
                 emailext from: 'ankujain128@gmail.com',
@@ -59,4 +58,4 @@ post{
             }
         }
     }
-
+}
