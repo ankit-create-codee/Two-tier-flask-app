@@ -41,3 +41,22 @@ pipeline {
       }
     }
 }
+post{
+        success{
+            script{
+                emailext from: 'ankujain128@gmail.com',
+                to: 'ankujain128@gmail.com',
+                body: 'Build success for Demo CICD App',
+                subject: 'Build success for Demo CICD App'
+            }
+        }
+        failure{
+            script{
+                emailext from: 'ankujain128@gmail.com',
+                to: 'ankujain128@gmail.com',
+                body: 'Build Failed for Demo CICD App',
+                subject: 'Build Failed for Demo CICD App'
+            }
+        }
+    }
+}
